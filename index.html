@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+    <!-- Linking CSS Files -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Linking google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container text-center pt-5">
+        <h1 class="my-5 mx-auto position-relative">Bookmarker</h1>
+        <hr style="border-top: dotted 3px;">
+        <h2 class="mb-5">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <form class="d-flex flex-column align-items-start justify-content-start gap-2">
+            <label for="bookmarkName">
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                Site Name</label>
+            <input class="form-control" oninput="Validation(this)" type="text" name="name" id="bookmarkName" placeholder="Bookmark Name">
+            <label for="siteUrl">
+                <i class="fa-solid fa-link pe-2"></i>
+                Site URL</label>
+            <input class="form-control" oninput="Validation(this)" type="text" name="name" id="siteUrl" placeholder="Website URL">
+        </form>
+        <button type="button" class="btn submit-btn my-4 px-5" id="sbmtButton">Submit</button>
+        <hr style="border-top: dotted 3px;">
+        <table class="table mt-4 text-center bg-light">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
